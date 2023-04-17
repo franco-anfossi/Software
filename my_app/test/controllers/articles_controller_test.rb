@@ -1,11 +1,11 @@
 require "test_helper"
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
-  setup do
+  #setup do
   
-  teardown do
-    Rails.cache.clear
-  end
+  #teardown do
+    #Rails.cache.clear
+  #end
   
   test "should get index" do
     get articles_url
@@ -26,13 +26,13 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
   # Son lo mismo
-  test "should show article" do
-    @article = Article.new(title: "Creating an article by test", body: "This is a body")
-    @article.save
+ #test "should show article" do
+    #@article = Article.new(title: "Creating an article by test", body: "This is a body")
+    #@article.save
 
-    get article_url(@article)
-    assert_response :success
-  end
+    #get article_url(@article)
+    #assert_response :success
+  #end
   
   test "should create article" do
     assert_difference("Article.count") do
